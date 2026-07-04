@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Stealth &amp; Concealment | StratoTech</title>
+    <meta name="description" content="StealthTex & InfraHex — nano-engineered stealth textiles that defeat thermal imaging, with a full concealment product line."/>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    "colors": {
+                        "page-bg": "#FAF9F5", "panel-bg": "#F0EFEB", "soft-card": "#E9E8E4",
+                        "soft-card-2": "#F4F3EF", "text": "#1B1B1B", "muted": "#8C8880",
+                        "muted-light": "#BDBAB2", "line": "#D9D7D0", "black": "#181818",
+                        "navy": "#0A192F", "navy-700": "#183c66", "accent": "#C1392E",
+                        "accent-light": "#D84C3E", "teal": "#1c8a9c", "deep-black": "#151515",
+                        "white-card": "#FFFDF8", "white-soft": "#FAF9F5"
+                    },
+                    "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem", "3xl": "2rem", "4xl": "3rem" },
+                    "spacing": { "gutter": "24px", "unit": "4px", "sm": "16px", "md": "32px", "xl": "128px", "lg": "64px", "margin": "40px", "xs": "8px", "section": "160px" },
+                    "fontFamily": { "label": ["Inter", "sans-serif"], "body-lg": ["Inter", "sans-serif"], "display": ["Inter", "sans-serif"], "h2": ["Inter", "sans-serif"], "h1": ["Inter", "sans-serif"], "h3": ["Inter", "sans-serif"], "body-md": ["Inter", "sans-serif"] },
+                    "fontSize": {
+                        "label": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "display": ["82px", { "lineHeight": "1.05", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "h2": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "h1": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+                        "h3": ["24px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["15px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/site.css"/>
+    <style>
+        body { background-color: theme('colors.page-bg'); }
+        .text-balance { text-wrap: balance; }
+        .text-pretty { text-wrap: pretty; }
+        .eyebrow { font-size:12px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#8C8880; display:inline-flex; align-items:center; gap:10px; }
+        .eyebrow::before { content:""; width:9px; height:9px; border:1.5px solid #C1392E; transform:rotate(45deg); flex:none; }
+    </style>
+</head>
+<body class="text-text font-body-lg min-h-screen antialiased selection:bg-navy selection:text-white bg-page-bg">
+
+    <!-- ============================ NAV ============================ -->
+    <header class="fixed top-[24px] left-0 right-0 z-50 flex items-center justify-center px-sm w-full pointer-events-none">
+        <div class="pointer-events-auto w-full max-w-[1040px] h-[72px] flex items-center justify-between bg-white/60 backdrop-blur-xl rounded-full pl-6 pr-xs py-xs shadow-xl border border-black/5">
+            <a href="index.html" class="flex items-center gap-3 shrink-0">
+                <img src="assets/images/logo.png" alt="StratoTech logo" class="h-14 w-auto max-w-[180px] object-contain"/>
+                <span class="font-bold text-lg tracking-tight text-navy font-label">StratoTech</span>
+            </a>
+            <nav data-nav class="hidden lg:flex items-center gap-7">
+                <a class="font-label text-label text-navy/70 hover:text-navy transition-colors duration-300" style="font-weight:500" href="index.html">Home</a>
+                <a class="font-label text-label text-navy/70 hover:text-navy transition-colors duration-300" style="font-weight:500" href="about.html">About</a>
+                <a class="font-label text-label text-navy/70 hover:text-navy transition-colors duration-300" style="font-weight:500" href="stealth.html">Stealth</a>
+                <a class="font-label text-label text-navy/70 hover:text-navy transition-colors duration-300" style="font-weight:500" href="uavs.html">UAVs</a>
+                <a class="font-label text-label text-navy/70 hover:text-navy transition-colors duration-300" style="font-weight:500" href="advanced-systems.html">Advanced Systems</a>
+                <a class="font-label text-label text-navy/70 hover:text-navy transition-colors duration-300" style="font-weight:500" href="maritime.html">Maritime</a>
+            </nav>
+            <div class="flex items-center gap-2">
+                <a href="contact.html" class="bg-navy text-white font-label text-label h-[56px] px-7 rounded-full hover:bg-navy/85 transition-colors duration-300 shrink-0 hidden sm:flex items-center shadow-sm">Contact Us</a>
+                <button data-nav-toggle aria-expanded="false" aria-label="Toggle menu" class="lg:hidden w-[52px] h-[52px] rounded-full border border-navy/20 text-navy flex items-center justify-center">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div data-nav-panel class="hidden lg:hidden fixed top-[104px] left-0 right-0 z-40 px-sm">
+        <div class="max-w-[1040px] mx-auto bg-navy/80 backdrop-blur-xl rounded-3xl border border-white/10 p-6 flex flex-col gap-2 shadow-2xl">
+            <a class="font-label text-white/80 hover:text-white py-3 px-2 rounded-xl hover:bg-white/5" href="index.html">Home</a>
+            <a class="font-label text-white/80 hover:text-white py-3 px-2 rounded-xl hover:bg-white/5" href="about.html">About</a>
+            <a class="font-label text-white/80 hover:text-white py-3 px-2 rounded-xl hover:bg-white/5" href="stealth.html">Stealth</a>
+            <a class="font-label text-white/80 hover:text-white py-3 px-2 rounded-xl hover:bg-white/5" href="uavs.html">UAVs</a>
+            <a class="font-label text-white/80 hover:text-white py-3 px-2 rounded-xl hover:bg-white/5" href="advanced-systems.html">Advanced Systems</a>
+            <a class="font-label text-white/80 hover:text-white py-3 px-2 rounded-xl hover:bg-white/5" href="maritime.html">Maritime</a>
+            <a class="font-label text-white bg-white/10 py-3 px-2 rounded-xl mt-2 text-center" href="contact.html">Contact Us</a>
+        </div>
+    </div>
+
+    <main class="pb-xl">
+        <!-- Intro -->
+        <section class="w-full max-w-[1728px] mx-auto px-margin flex flex-col items-center text-center mb-lg pt-[220px] relative overflow-hidden">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-screen max-w-none h-full z-0 overflow-hidden pointer-events-none">
+                <video class="absolute top-1/2 left-1/2 -translate-x-[15%] -translate-y-[70%] w-full h-full object-fill select-none opacity-40 scale-145" style="mask-image:radial-gradient(ellipse 60% 60% at center, #000 40%, transparent 75%); -webkit-mask-image:radial-gradient(ellipse 60% 60% at center, #000 40%, transparent 75%);" autoplay loop muted playsinline>
+                    <source src="assets/videos/wing-1.mp4" type="video/mp4"/>
+                </video>
+            </div>
+            <div class="eyebrow mb-6 relative z-10">StealthTex &amp; InfraHex</div>
+            <h1 class="font-display text-display text-balance max-w-4xl mb-8 text-text leading-[1.04] relative z-10">InfraHex &amp; StealthTex</h1>
+            <p class="font-body-lg text-body-lg text-muted max-w-2xl text-pretty relative z-10">
+                Vanish from thermal sensors. Nanotechnology that defeats advanced MWIR and LWIR detection with a multi-spectral stealth textile engineered at nano-scale.
+            </p>
+        </section>
+
+        <!-- Nano-scale narrative -->
+        <section class="w-full max-w-[1728px] mx-auto px-margin mb-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
+                <figure class="imgslot group shadow-2xl min-h-[420px]" data-img="stealth" data-alt="StealthTex thermal stealth textile" style="border-radius:40px">
+                    <span class="imgslot-tag">Thermal / stealth textile · 4:3</span>
+                    <div class="absolute inset-0 z-[4] bg-gradient-to-t from-navy/60 to-transparent pointer-events-none"></div>
+                    <div class="absolute bottom-8 left-8 z-[5] flex flex-wrap gap-4">
+                        <div class="bg-white/12 backdrop-blur-xl border border-white/25 rounded-3xl px-6 py-5">
+                            <div class="font-display text-[40px] font-bold text-white leading-none">&lt;0.05%</div>
+                            <div class="font-label text-[10px] uppercase tracking-[0.16em] text-white/75 mt-2">Thermal signature</div>
+                        </div>
+                        <div class="bg-white/12 backdrop-blur-xl border border-white/25 rounded-3xl px-6 py-5">
+                            <div class="font-display text-[40px] font-bold text-white leading-none">100m</div>
+                            <div class="font-label text-[10px] uppercase tracking-[0.16em] text-white/75 mt-2">Undetectable at night</div>
+                        </div>
+                    </div>
+                </figure>
+
+                <div class="bg-white-card border border-line/40 rounded-[40px] p-10 md:p-12 flex flex-col justify-center shadow-sm">
+                    <div class="eyebrow mb-5">Multi-spectral · StealthTex SET</div>
+                    <h2 class="font-display text-[36px] leading-[1.12] font-bold tracking-tight text-text text-balance mb-5">A stealth textile, engineered at nano scale</h2>
+                    <p class="font-body-lg text-muted text-pretty mb-8">
+                        A lightweight nanofiber material that conceals the radiation signatures emitted by the human body and machinery — directly defeating thermal-imaging devices that detect even well-camouflaged individuals.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div class="bg-panel-bg rounded-2xl p-5 border border-line/30">
+                            <span class="material-symbols-outlined text-accent mb-2">thermostat</span>
+                            <h3 class="font-h3 text-base font-bold text-text mb-1">Defeats thermal imaging</h3>
+                            <p class="font-body-md text-muted">Conceals heat and radiation signatures from detection devices.</p>
+                        </div>
+                        <div class="bg-panel-bg rounded-2xl p-5 border border-line/30">
+                            <span class="material-symbols-outlined text-accent mb-2">science</span>
+                            <h3 class="font-h3 text-base font-bold text-text mb-1">Nano-engineered properties</h3>
+                            <p class="font-body-md text-muted">Super-hydrophobicity, odour &amp; moisture control, elasticity, strength and bacterial resistance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specifications / performance in numbers -->
+        <section class="w-full max-w-[1728px] mx-auto px-margin mb-xl">
+            <div class="bg-navy rounded-[48px] overflow-hidden relative">
+                <div class="absolute inset-0 opacity-50 pointer-events-none" style="background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:40px 40px;"></div>
+                <div class="relative p-10 md:p-16">
+                    <div class="max-w-2xl mb-12">
+                        <div class="eyebrow mb-5" style="color:#8fd2dc;">Specifications</div>
+                        <h2 class="font-display text-[40px] leading-[1.1] font-bold tracking-tight text-white text-balance">Performance, in numbers</h2>
+                    </div>
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-8 mb-14">
+                        <div>
+                            <div class="font-display text-[46px] md:text-[52px] font-bold text-white leading-none">500<span class="text-teal text-[0.5em] align-top">m</span></div>
+                            <div class="font-body-md text-white/55 mt-3">Undetectable by day to thermal sensors</div>
+                        </div>
+                        <div>
+                            <div class="font-display text-[46px] md:text-[52px] font-bold text-white leading-none">RET 6–9</div>
+                            <div class="font-body-md text-white/55 mt-3">Breathable &amp; noiseless, wind-resistant in tactical use</div>
+                        </div>
+                        <div>
+                            <div class="font-display text-[46px] md:text-[52px] font-bold text-white leading-none">&gt;18<span class="text-teal text-[0.5em] align-top">m</span></div>
+                            <div class="font-body-md text-white/55 mt-3">Water-column resistance · flame retardant</div>
+                        </div>
+                        <div>
+                            <div class="font-display text-[46px] md:text-[52px] font-bold text-white leading-none">~400<span class="text-teal text-[0.5em] align-top">g</span></div>
+                            <div class="font-body-md text-white/55 mt-3">Full-suit weight</div>
+                        </div>
+                    </div>
+                    <div class="border-t border-white/10 pt-8 grid md:grid-cols-3 gap-8">
+                        <div>
+                            <div class="font-label text-[11px] uppercase tracking-[0.16em] text-teal mb-3">Field concealment</div>
+                            <ul class="font-body-md text-white/70 space-y-2">
+                                <li>Defeats thermal imaging</li>
+                                <li>RET 6–9 · breathable &amp; noiseless</li>
+                                <li>Wind-resistant in tactical use</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="font-label text-[11px] uppercase tracking-[0.16em] text-teal mb-3">Military gear</div>
+                            <ul class="font-body-md text-white/70 space-y-2">
+                                <li>Vests &amp; vehicle covers</li>
+                                <li>Balaclava, gloves, shoe covers</li>
+                                <li>Tailor-made tactical accessories</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="font-label text-[11px] uppercase tracking-[0.16em] text-teal mb-3">Membranes</div>
+                            <ul class="font-body-md text-white/70 space-y-2">
+                                <li>Respiratory protection devices</li>
+                                <li>Apparel &amp; shoe membranes</li>
+                                <li>Coverall &amp; cosmetic membranes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="font-body-md text-white/45 mt-10 max-w-2xl">
+                        Nanofiber diameter 0.00005–0.000075 mm — a high surface-area-to-volume ratio enabling super-fine filters and high-performance membranes.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- InfraHex product line -->
+        <section class="py-lg px-margin max-w-[1728px] mx-auto">
+            <div class="text-center mb-14">
+                <div class="eyebrow justify-center mb-5" style="display:inline-flex;">The product line</div>
+                <h2 class="font-display text-[44px] leading-[1.08] font-bold tracking-tight text-text text-balance">InfraHex Universal Solutions</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-white-card rounded-[32px] p-6 flex flex-col group overflow-hidden border border-line/40 shadow-sm hover:shadow-xl transition-all reveal">
+                    <figure class="imgslot mb-6" data-img="infraponcho" data-alt="InfraPoncho" style="aspect-ratio:4/3;border-radius:20px">
+                        <span class="imgslot-tag">InfraPoncho · 4:3</span>
+                    </figure>
+                    <h3 class="font-h3 text-xl font-bold mb-2 text-text">InfraPoncho</h3>
+                    <p class="font-body-md text-muted mb-4 flex-grow">Universal poncho/cloak adapting to the surrounding environment. 96% thermal signature reduction. Waterproof and windproof.</p>
+                    <div class="pt-4 border-t border-line/40 flex justify-between font-label text-[11px] text-navy uppercase tracking-[0.14em]">
+                        <span>Weight 900g</span><span>Khaki / Digital</span>
+                    </div>
+                </div>
+
+                <div class="bg-white-card rounded-[32px] p-6 flex flex-col group overflow-hidden border border-line/40 shadow-sm hover:shadow-xl transition-all reveal">
+                    <figure class="imgslot mb-6" data-img="infraghillie" data-alt="InfraGhillie" style="aspect-ratio:4/3;border-radius:20px">
+                        <span class="imgslot-tag">InfraGhillie · 4:3</span>
+                    </figure>
+                    <h3 class="font-h3 text-xl font-bold mb-2 text-text">InfraGhillie</h3>
+                    <p class="font-body-md text-muted mb-4 flex-grow">Silent, waterproof and windproof Ghillie suit for advanced snipers and special forces requiring absolute concealment.</p>
+                    <div class="pt-4 border-t border-line/40 flex justify-between font-label text-[11px] text-navy uppercase tracking-[0.14em]">
+                        <span>Weight 1100g</span><span>Desert / Camo</span>
+                    </div>
+                </div>
+
+                <div class="bg-white-card rounded-[32px] p-6 flex flex-col group overflow-hidden border border-line/40 shadow-sm hover:shadow-xl transition-all reveal">
+                    <figure class="imgslot mb-6" data-img="infratarp" data-alt="InfraTarp" style="aspect-ratio:4/3;border-radius:20px">
+                        <span class="imgslot-tag">InfraTarp · 4:3</span>
+                    </figure>
+                    <h3 class="font-h3 text-xl font-bold mb-2 text-text">InfraTarp</h3>
+                    <p class="font-body-md text-muted mb-4 flex-grow">Universal tarp for hidden persons and heated equipment, deployable as a tent. Up to 96% signature reduction.</p>
+                    <div class="pt-4 border-t border-line/40 flex justify-between font-label text-[11px] text-navy uppercase tracking-[0.14em]">
+                        <span>Sizes 3×3m &amp; 5×8m</span>
+                    </div>
+                </div>
+
+                <div class="bg-white-card rounded-[32px] p-6 flex flex-col group overflow-hidden border border-line/40 shadow-sm hover:shadow-xl transition-all reveal">
+                    <figure class="imgslot mb-6" data-img="supcover" data-alt="SupCover" style="aspect-ratio:4/3;border-radius:20px">
+                        <span class="imgslot-tag">SupCover · 4:3</span>
+                    </figure>
+                    <h3 class="font-h3 text-xl font-bold mb-2 text-text">SupCover</h3>
+                    <p class="font-body-md text-muted mb-4 flex-grow">Thermal signature reduction cover for heated gun parts up to 350°C. Mechanically durable — one size fits all rifles.</p>
+                    <div class="pt-4 border-t border-line/40 flex justify-between font-label text-[11px] text-navy uppercase tracking-[0.14em]">
+                        <span>Weight 150g</span>
+                    </div>
+                </div>
+
+                <div class="bg-panel-bg rounded-[32px] p-6 flex flex-col md:col-span-2 group overflow-hidden border border-line/50 shadow-inner reveal">
+                    <div class="flex flex-col md:flex-row gap-6 h-full">
+                        <figure class="imgslot w-full md:w-1/2 min-h-[220px]" data-img="godark-pouch" data-alt="GoDark pouch" style="border-radius:20px">
+                            <span class="imgslot-tag">GoDark pouch · 3:2</span>
+                        </figure>
+                        <div class="w-full md:w-1/2 flex flex-col justify-center py-4">
+                            <h3 class="font-h3 text-xl font-bold mb-2 text-text">GoDark Tactic &amp; Chesty</h3>
+                            <p class="font-body-md text-muted mb-6">Advanced signal-blocking pouches. 100% blocking from 500 MHz (mobile — GPRS, EDGE, 3G, 4G, 5G, WiFi, Bluetooth, RFID). Prevents geolocation, remote hacking and eavesdropping.</p>
+                            <div class="pt-4 border-t border-line/40 font-label text-[11px] text-navy uppercase tracking-[0.14em]">
+                                Attenuation &gt;70 dB at 1–10 GHz
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="bg-navy text-white pt-xl pb-lg px-margin rounded-t-[64px] relative z-20 mt-12">
+        <div class="max-w-[1728px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-xl mb-xl">
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/images/logo.png" alt="StratoTech logo" class="h-14 w-auto max-w-[180px] object-contain"/>
+                        <span class="font-bold text-lg tracking-tight text-white">StratoTech</span>
+                    </div>
+                    <p class="font-body-md text-white/50 max-w-xs">Deep-tech defence solutions in stealth nanotextiles, advanced composites and secure maritime systems — engineered in Hyderabad, India.</p>
+                </div>
+                <div>
+                    <h4 class="font-label text-white mb-6 uppercase tracking-widest text-[10px]">Company</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="about.html">About Us</a></li>
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="about.html">Leadership</a></li>
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label text-white mb-6 uppercase tracking-widest text-[10px]">Solutions</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="stealth.html">StealthTex &amp; InfraHex</a></li>
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="uavs.html">UAV Systems</a></li>
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="advanced-systems.html">Advanced Composites</a></li>
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="maritime.html">AIS-NSM Transponders</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label text-white mb-6 uppercase tracking-widest text-[10px]">Contact</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="mailto:info@stratotech.co">info@stratotech.co</a></li>
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="tel:+917416621515">+91 74166 21515</a></li>
+                        <li class="font-body-md text-white/60">STRATOTECH AEROSPACE AND DEFENCE PRIVATE LIMITED<br/>Flat No.501, SM Royal Arcade, Chandanagar, Tirumalagiri<br/>Hyderabad – 500050, Telangana</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-md border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="font-label text-[11px] text-white/40">© <span data-year>2026</span> StratoTech Aerospace &amp; Defence Pvt Ltd. All rights reserved.</p>
+                <span class="font-label text-[11px] text-white/40">Beyond The Visual Range</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/site.js"></script>
+</body>
+</html>

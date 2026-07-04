@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>About &amp; Leadership | StratoTech</title>
+    <meta name="description" content="StratoTech is built on deep defence expertise — founders and advisors drawn from the Indian Navy, Air Force and global aerospace industry."/>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    "colors": {
+                        "page-bg": "#FAF9F5", "panel-bg": "#F0EFEB", "soft-card": "#E9E8E4",
+                        "soft-card-2": "#F4F3EF", "text": "#1B1B1B", "muted": "#8C8880",
+                        "muted-light": "#BDBAB2", "line": "#D9D7D0", "black": "#181818",
+                        "navy": "#0A192F", "navy-700": "#183c66", "accent": "#C1392E",
+                        "accent-light": "#D84C3E", "teal": "#1c8a9c", "deep-black": "#151515",
+                        "white-card": "#FFFDF8", "white-soft": "#FAF9F5"
+                    },
+                    "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem", "3xl": "2rem", "4xl": "3rem" },
+                    "spacing": { "gutter": "24px", "unit": "4px", "sm": "16px", "md": "32px", "xl": "128px", "lg": "64px", "margin": "40px", "xs": "8px", "section": "160px" },
+                    "fontFamily": { "label": ["Inter", "sans-serif"], "body-lg": ["Inter", "sans-serif"], "display": ["Inter", "sans-serif"], "h2": ["Inter", "sans-serif"], "h1": ["Inter", "sans-serif"], "h3": ["Inter", "sans-serif"], "body-md": ["Inter", "sans-serif"] },
+                    "fontSize": {
+                        "label": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "display": ["82px", { "lineHeight": "1.05", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "h2": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "h1": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+                        "h3": ["24px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["15px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/site.css"/>
+    <style>
+        body { background-color: theme('colors.page-bg'); }
+        .text-balance { text-wrap: balance; }
+        .text-pretty { text-wrap: pretty; }
+        .eyebrow { font-size:12px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#8C8880; display:inline-flex; align-items:center; gap:10px; }
+        .eyebrow::before { content:""; width:9px; height:9px; border:1.5px solid #C1392E; transform:rotate(45deg); flex:none; }
+    </style>
+</head>
+<body class="text-text font-body-lg min-h-screen antialiased selection:bg-navy selection:text-white bg-page-bg">
+
+    <!-- ============================ NAV ============================ -->
+    <header class="fixed top-[24px] left-0 right-0 z-50 flex items-center justify-center px-sm w-full pointer-events-none">
+        <div class="pointer-events-auto w-full max-w-[1040px] h-[72px] flex items-center justify-between bg-white/60 backdrop-blur-xl rounded-full pl-6 pr-xs py-xs shadow-xl border border-black/5">
+            <a href="index.html" class="flex items-center gap-3 shrink-0">
+                <img src="assets/images/logo.png" alt="StratoTech logo" class="h-14 w-auto max-w-[180px] object-contain"/>
+                <span class="font-bold text-lg tracking-tight text-navy font-label">StratoTech</span>
+            </a>
+            <nav data-nav class="hidden lg:flex items-center gap-7">
+                <a class="font-label text-label text-navy/70 hover:text-navy transition-colors duration-300" style="font-weight:500" href="index.html">Home</a>
+                <a class="font-label text-label text-navy/70 hover:text-navy transition-colors duration-300" style="font-weight:500" href="about.html">About</a>
+                <a class="font-label text-label text-navy/70 hover:text-navy transition-colors duration-300" style="font-weight:500" href="stealth.html">Stealth</a>
+                <a class="font-label text-label text-navy/70 hover:text-navy transition-colors duration-300" style="font-weight:500" href="uavs.html">UAVs</a>
+                <a class="font-label text-label text-navy/70 hover:text-navy transition-colors duration-300" style="font-weight:500" href="advanced-systems.html">Advanced Systems</a>
+                <a class="font-label text-label text-navy/70 hover:text-navy transition-colors duration-300" style="font-weight:500" href="maritime.html">Maritime</a>
+            </nav>
+            <div class="flex items-center gap-2">
+                <a href="contact.html" class="bg-navy text-white font-label text-label h-[56px] px-7 rounded-full hover:bg-navy/85 transition-colors duration-300 shrink-0 hidden sm:flex items-center shadow-sm">Contact Us</a>
+                <button data-nav-toggle aria-expanded="false" aria-label="Toggle menu" class="lg:hidden w-[52px] h-[52px] rounded-full border border-navy/20 text-navy flex items-center justify-center">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div data-nav-panel class="hidden lg:hidden fixed top-[104px] left-0 right-0 z-40 px-sm">
+        <div class="max-w-[1040px] mx-auto bg-navy/80 backdrop-blur-xl rounded-3xl border border-white/10 p-6 flex flex-col gap-2 shadow-2xl">
+            <a class="font-label text-white/80 hover:text-white py-3 px-2 rounded-xl hover:bg-white/5" href="index.html">Home</a>
+            <a class="font-label text-white/80 hover:text-white py-3 px-2 rounded-xl hover:bg-white/5" href="about.html">About</a>
+            <a class="font-label text-white/80 hover:text-white py-3 px-2 rounded-xl hover:bg-white/5" href="stealth.html">Stealth</a>
+            <a class="font-label text-white/80 hover:text-white py-3 px-2 rounded-xl hover:bg-white/5" href="uavs.html">UAVs</a>
+            <a class="font-label text-white/80 hover:text-white py-3 px-2 rounded-xl hover:bg-white/5" href="advanced-systems.html">Advanced Systems</a>
+            <a class="font-label text-white/80 hover:text-white py-3 px-2 rounded-xl hover:bg-white/5" href="maritime.html">Maritime</a>
+            <a class="font-label text-white bg-white/10 py-3 px-2 rounded-xl mt-2 text-center" href="contact.html">Contact Us</a>
+        </div>
+    </div>
+
+    <main class="pb-xl">
+        <section class="w-full max-w-[1728px] mx-auto px-margin flex flex-col items-center text-center mb-xl pt-[220px] relative overflow-hidden">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-screen max-w-none h-full z-0 overflow-hidden pointer-events-none">
+                <video class="absolute top-1/2 left-1/2 -translate-x-[15%] -translate-y-[70%] w-full h-full object-fill select-none opacity-40 scale-145" style="mask-image:radial-gradient(ellipse 60% 60% at center, #000 40%, transparent 75%); -webkit-mask-image:radial-gradient(ellipse 60% 60% at center, #000 40%, transparent 75%);" autoplay loop muted playsinline>
+                    <source src="assets/videos/wing-1.mp4" type="video/mp4"/>
+                </video>
+            </div>
+            <div class="eyebrow mb-6 relative z-10">About StratoTech</div>
+            <h1 class="font-display text-display text-balance max-w-4xl mb-8 text-text leading-[1.04] relative z-10">Built on Defence Expertise</h1>
+            <p class="font-body-lg text-body-lg text-muted max-w-3xl text-pretty relative z-10">
+                Headquartered in Hyderabad, StratoTech specialises in cutting-edge aerospace and defence solutions. Our founders bring complementary expertise across submarine construction, program management, aircraft and ship maintenance, and strategic acquisitions — advised by senior retired flag officers of the Indian Navy and Air Force.
+            </p>
+        </section>
+
+        <!-- Founders -->
+        <section class="py-lg px-margin max-w-[1728px] mx-auto">
+            <div class="text-center mb-14">
+                <div class="eyebrow justify-center mb-5" style="display:inline-flex;">Leadership</div>
+                <h2 class="font-display text-[44px] leading-[1.08] font-bold tracking-tight text-text text-balance">The Founders</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[820px] mx-auto">
+
+                <div class="bg-white-card rounded-[32px] overflow-hidden border border-line/40 shadow-sm hover:shadow-xl transition-all group reveal">
+                    <figure class="imgslot" data-img="amit-raj-sinha" data-alt="Amit Raj Sinha" style="aspect-ratio:4/5">
+                        <span class="imgslot-tag">Amit Raj Sinha · 4:5</span>
+                    </figure>
+                    <div class="p-7">
+                        <div class="font-label text-[11px] text-accent tracking-[0.16em] uppercase mb-2">Founder</div>
+                        <h3 class="font-h3 text-2xl font-bold mb-3 text-text">Amit Raj Sinha</h3>
+                        <p class="font-body-md text-muted mb-3">Deputy Director, Integrated HQ (MoD) — Indian Navy · Managing Director, Sigachi Industries.</p>
+                        <p class="font-body-md text-text text-sm">Harvard AMP · 2025 ISB PGP · PG Dip Marine Engineering · Fellow, IE.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white-card rounded-[32px] overflow-hidden border border-line/40 shadow-sm hover:shadow-xl transition-all group reveal">
+                    <figure class="imgslot" data-img="lijo-chacko" data-alt="Lijo Chacko" style="aspect-ratio:4/5">
+                        <span class="imgslot-tag">Lijo Chacko · 4:5</span>
+                    </figure>
+                    <div class="p-7">
+                        <div class="font-label text-[11px] text-accent tracking-[0.16em] uppercase mb-2">Founder</div>
+                        <h3 class="font-h3 text-2xl font-bold mb-3 text-text">Lijo Chacko</h3>
+                        <p class="font-body-md text-muted mb-3">Indian Navy Attack Submariner · Head, Submarines Division, Naval Dockyard Mumbai · Project Coordinator, Scorpene Submarine Program · CEO, Sigachi Industries MEA.</p>
+                        <p class="font-body-md text-text text-sm">Yale Executive Leadership · JBIMS · Naval College of Engineering · Himalayan Mountaineering Institute.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Advisors -->
+        <section class="py-lg px-margin max-w-[1728px] mx-auto">
+            <div class="bg-panel-bg rounded-[64px] border border-line/30 p-8 md:p-14">
+                <div class="text-center mb-14">
+                    <div class="eyebrow justify-center mb-5" style="display:inline-flex;">Advisory Board</div>
+                    <h2 class="font-display text-[44px] leading-[1.08] font-bold tracking-tight text-text text-balance">Advisors</h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                    <div class="bg-white-card rounded-[32px] p-8 flex flex-col sm:flex-row gap-7 items-start border border-line/40 shadow-sm reveal">
+                        <figure class="imgslot shrink-0 w-32 h-32" data-img="subasish-gantayet" data-alt="Rear Admiral Subasish Gantayet" style="border-radius:9999px">
+                            <span class="imgslot-tag" style="font-size:9px;letter-spacing:.06em;padding:5px 9px;">Photo</span>
+                        </figure>
+                        <div>
+                            <h3 class="font-h3 text-xl font-bold mb-1 text-text">Rear Admiral Subasish Gantayet</h3>
+                            <div class="font-label text-[11px] text-accent tracking-[0.16em] uppercase mb-4">Advisor · VSM (Retd)</div>
+                            <p class="font-body-md text-muted mb-2">Assistant Chief of Materiel (IT &amp; Systems). Over 35 years of service.</p>
+                            <p class="font-body-md text-text text-sm">Expertise in IT, cybersecurity and AI/ML. Led Project Seabird (USD 2,500 million outlay). IIT Kharagpur.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white-card rounded-[32px] p-8 flex flex-col sm:flex-row gap-7 items-start border border-line/40 shadow-sm reveal">
+                        <figure class="imgslot shrink-0 w-32 h-32" data-img="ip-vipin" data-alt="Air Marshal IP Vipin" style="border-radius:9999px">
+                            <span class="imgslot-tag" style="font-size:9px;letter-spacing:.06em;padding:5px 9px;">Photo</span>
+                        </figure>
+                        <div>
+                            <h3 class="font-h3 text-xl font-bold mb-1 text-text">Air Marshal IP Vipin</h3>
+                            <div class="font-label text-[11px] text-accent tracking-[0.16em] uppercase mb-4">Advisor · AVSM, VM (Retd)</div>
+                            <p class="font-body-md text-muted mb-2">Commandant, Control and Direction of Transport and Helicopter Operation in IAF.</p>
+                            <p class="font-body-md text-text text-sm">Over 6,000 flying hours. Strategic Defence Management. NDC, DSSC, NDA graduate.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="bg-navy text-white pt-xl pb-lg px-margin rounded-t-[64px] relative z-20 mt-12">
+        <div class="max-w-[1728px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-xl mb-xl">
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/images/logo.png" alt="StratoTech logo" class="h-14 w-auto max-w-[180px] object-contain"/>
+                        <span class="font-bold text-lg tracking-tight text-white">StratoTech</span>
+                    </div>
+                    <p class="font-body-md text-white/50 max-w-xs">Deep-tech defence solutions in stealth nanotextiles, advanced composites and secure maritime systems — engineered in Hyderabad, India.</p>
+                </div>
+                <div>
+                    <h4 class="font-label text-white mb-6 uppercase tracking-widest text-[10px]">Company</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="about.html">About Us</a></li>
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="about.html">Leadership</a></li>
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label text-white mb-6 uppercase tracking-widest text-[10px]">Solutions</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="stealth.html">StealthTex &amp; InfraHex</a></li>
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="uavs.html">UAV Systems</a></li>
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="advanced-systems.html">Advanced Composites</a></li>
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="maritime.html">AIS-NSM Transponders</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label text-white mb-6 uppercase tracking-widest text-[10px]">Contact</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="mailto:info@stratotech.co">info@stratotech.co</a></li>
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="tel:+917416621515">+91 74166 21515</a></li>
+                        <li class="font-body-md text-white/60">STRATOTECH AEROSPACE AND DEFENCE PRIVATE LIMITED<br/>Flat No.501, SM Royal Arcade, Chandanagar, Tirumalagiri<br/>Hyderabad – 500050, Telangana</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-md border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="font-label text-[11px] text-white/40">© <span data-year>2026</span> StratoTech Aerospace &amp; Defence Pvt Ltd. All rights reserved.</p>
+                <span class="font-label text-[11px] text-white/40">Beyond The Visual Range</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/site.js"></script>
+</body>
+</html>

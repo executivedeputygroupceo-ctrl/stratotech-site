@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace https://www.stratotech.co with your live domain once it's pointed at your host. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.stratotech.co/index.html</loc></url>
+  <url><loc>https://www.stratotech.co/about.html</loc></url>
+  <url><loc>https://www.stratotech.co/stealth.html</loc></url>
+  <url><loc>https://www.stratotech.co/uavs.html</loc></url>
+  <url><loc>https://www.stratotech.co/advanced-systems.html</loc></url>
+  <url><loc>https://www.stratotech.co/maritime.html</loc></url>
+  <url><loc>https://www.stratotech.co/contact.html</loc></url>
+</urlset>

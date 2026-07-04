@@ -1,0 +1,107 @@
+/* ==========================================================================
+   STRATOTECH — shared helpers for the warm-paper theme
+   Loaded on top of the Tailwind config that lives in each page's <head>.
+   The main thing here is the IMAGE-SLOT system: every photo on the site is a
+   fixed-ratio placeholder so you can drop your own image in later with ZERO
+   layout shift. See the "HOW TO ADD AN IMAGE" note at the bottom of this file.
+   ========================================================================== */
+
+/* ---- Image slot -------------------------------------------------------- */
+/* A placeholder box that holds a photo's exact footprint. Set the shape with
+   inline `style="aspect-ratio:16/9"` (or a fixed height) + a border-radius.   */
+.imgslot{
+  position:relative;
+  display:block;
+  overflow:hidden;
+  margin:0;
+  background:#0A192F;
+  background-image:
+    radial-gradient(120% 130% at 12% 8%, rgba(58,169,187,.20), transparent 55%),
+    radial-gradient(120% 130% at 92% 100%, rgba(255,65,108,.10), transparent 55%),
+    linear-gradient(135deg,#0d1e39 0%,#0a192f 55%,#07101f 100%);
+}
+/* blueprint grid, faded toward the edges */
+.imgslot::before{
+  content:"";
+  position:absolute; inset:0; z-index:1;
+  background-image:
+    linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.055) 1px, transparent 1px);
+  background-size:34px 34px;
+  -webkit-mask-image:radial-gradient(130% 130% at 50% 42%, #000 35%, transparent 88%);
+          mask-image:radial-gradient(130% 130% at 50% 42%, #000 35%, transparent 88%);
+  pointer-events:none;
+}
+/* dashed targeting frame */
+.imgslot::after{
+  content:"";
+  position:absolute; inset:16px; z-index:1;
+  border:1px dashed rgba(255,255,255,.16);
+  border-radius:12px;
+  pointer-events:none;
+}
+/* centered caption chip */
+.imgslot-tag{
+  position:absolute; z-index:2; left:50%; top:50%;
+  transform:translate(-50%,-50%);
+  display:inline-flex; align-items:center; gap:9px;
+  max-width:86%;
+  padding:8px 14px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:999px;
+  background:rgba(8,17,32,.35);
+  backdrop-filter:blur(2px);
+  font-family:"Inter",system-ui,sans-serif;
+  font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
+  color:rgba(255,255,255,.62);
+  white-space:nowrap;
+  text-align:center;
+}
+.imgslot-tag::before{
+  content:"";
+  width:13px; height:13px; flex:none;
+  border:1.5px solid rgba(58,169,187,.85);
+  border-radius:50%;
+  box-shadow:0 0 0 3px rgba(58,169,187,.14);
+}
+/* THE image: drop an <img> anywhere inside .imgslot and it fills the box
+   exactly, covering the placeholder graphic. */
+.imgslot > img{
+  position:absolute; inset:0; z-index:3;
+  width:100%; height:100%;
+  object-fit:cover;
+  display:block;
+}
+/* subtle zoom on hover when a slot lives inside a `group` container */
+.group:hover .imgslot > img{ transform:scale(1.05); }
+.imgslot > img{ transition:transform .8s ease; }
+
+/* ---- Reveal on scroll -------------------------------------------------- */
+.reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+.reveal.in{ opacity:1; transform:none; }
+@media (prefers-reduced-motion: reduce){
+  .reveal{ opacity:1; transform:none; transition:none; }
+  .imgslot > img{ transition:none; }
+}
+
+/* ==========================================================================
+   HOW TO ADD AN IMAGE (for whoever edits this site)
+   --------------------------------------------------------------------------
+   Find a placeholder in the HTML — it looks like this:
+
+       <figure class="imgslot" style="aspect-ratio:16/9;border-radius:32px">
+         <span class="imgslot-tag">Fighter jet · 21:9</span>
+       </figure>
+
+   Drop your photo in by adding ONE <img> line inside it:
+
+       <figure class="imgslot" style="aspect-ratio:16/9;border-radius:32px">
+         <span class="imgslot-tag">Fighter jet · 21:9</span>
+         <img src="assets/images/hero.jpg" alt="Fighter jet over Hyderabad">
+       </figure>
+
+   The image automatically fills the box and crops neatly — the layout never
+   moves. Match your photo's shape to the ratio shown in the chip for the best
+   crop (e.g. "21:9" = a wide banner, "4:5" = a tall portrait).
+   You can delete the <span class="imgslot-tag"> line once a real image is in.
+   ========================================================================== */

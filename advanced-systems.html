@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Advanced Systems | StratoTech</title>
+    <meta name="description" content="Advanced composites (PMC, MMC, CMC), rocket motors, laser-guided missiles and electro-optical seekers engineered for performance and precision."/>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    "colors": {
+                        "page-bg": "#FAF9F5", "panel-bg": "#F0EFEB", "soft-card": "#E9E8E4",
+                        "soft-card-2": "#F4F3EF", "text": "#1B1B1B", "muted": "#8C8880",
+                        "muted-light": "#BDBAB2", "line": "#D9D7D0", "black": "#181818",
+                        "navy": "#0A192F", "navy-700": "#183c66", "accent": "#C1392E",
+                        "accent-light": "#D84C3E", "teal": "#1c8a9c", "deep-black": "#151515",
+                        "white-card": "#FFFDF8", "white-soft": "#FAF9F5"
+                    },
+                    "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem", "3xl": "2rem", "4xl": "3rem" },
+                    "spacing": { "gutter": "24px", "unit": "4px", "sm": "16px", "md": "32px", "xl": "128px", "lg": "64px", "margin": "40px", "xs": "8px", "section": "160px" },
+                    "fontFamily": { "label": ["Inter", "sans-serif"], "body-lg": ["Inter", "sans-serif"], "display": ["Inter", "sans-serif"], "h2": ["Inter", "sans-serif"], "h1": ["Inter", "sans-serif"], "h3": ["Inter", "sans-serif"], "body-md": ["Inter", "sans-serif"] },
+                    "fontSize": {
+                        "label": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "display": ["82px", { "lineHeight": "1.05", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "h2": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "h1": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+                        "h3": ["24px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["15px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/site.css"/>
+    <style>
+        body { background-color: theme('colors.page-bg'); }
+        .text-balance { text-wrap: balance; }
+        .text-pretty { text-wrap: pretty; }
+        .eyebrow { font-size:12px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#8C8880; display:inline-flex; align-items:center; gap:10px; }
+        .eyebrow::before { content:""; width:9px; height:9px; border:1.5px solid #C1392E; transform:rotate(45deg); flex:none; }
+    </style>
+</head>
+<body class="text-text font-body-lg min-h-screen antialiased selection:bg-navy selection:text-white bg-page-bg">
+
+    <!-- ============================ NAV ============================ -->
+    <header class="fixed top-[24px] left-0 right-0 z-50 flex items-center justify-center px-sm w-full pointer-events-none">
+        <div class="pointer-events-auto w-full max-w-[1040px] h-[72px] flex items-center justify-between bg-white/60 backdrop-blur-xl rounded-full pl-6 pr-xs py-xs shadow-xl border border-black/5">
+            <a href="index.html" class="flex items-center gap-3 shrink-0">
+                <img src="assets/images/logo.png" alt="StratoTech logo" class="h-14 w-auto max-w-[180px] object-contain"/>
+                <span class="font-bold text-lg tracking-tight text-navy font-label">StratoTech</span>
+            </a>
+            <nav data-nav class="hidden lg:flex items-center gap-7">
+                <a class="font-label text-label text-navy/70 hover:text-navy transition-colors duration-300" style="font-weight:500" href="index.html">Home</a>
+                <a class="font-label text-label text-navy/70 hover:text-navy transition-colors duration-300" style="font-weight:500" href="about.html">About</a>
+                <a class="font-label text-label text-navy/70 hover:text-navy transition-colors duration-300" style="font-weight:500" href="stealth.html">Stealth</a>
+                <a class="font-label text-label text-navy/70 hover:text-navy transition-colors duration-300" style="font-weight:500" href="uavs.html">UAVs</a>
+                <a class="font-label text-label text-navy/70 hover:text-navy transition-colors duration-300" style="font-weight:500" href="advanced-systems.html">Advanced Systems</a>
+                <a class="font-label text-label text-navy/70 hover:text-navy transition-colors duration-300" style="font-weight:500" href="maritime.html">Maritime</a>
+            </nav>
+            <div class="flex items-center gap-2">
+                <a href="contact.html" class="bg-navy text-white font-label text-label h-[56px] px-7 rounded-full hover:bg-navy/85 transition-colors duration-300 shrink-0 hidden sm:flex items-center shadow-sm">Contact Us</a>
+                <button data-nav-toggle aria-expanded="false" aria-label="Toggle menu" class="lg:hidden w-[52px] h-[52px] rounded-full border border-navy/20 text-navy flex items-center justify-center">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div data-nav-panel class="hidden lg:hidden fixed top-[104px] left-0 right-0 z-40 px-sm">
+        <div class="max-w-[1040px] mx-auto bg-navy/80 backdrop-blur-xl rounded-3xl border border-white/10 p-6 flex flex-col gap-2 shadow-2xl">
+            <a class="font-label text-white/80 hover:text-white py-3 px-2 rounded-xl hover:bg-white/5" href="index.html">Home</a>
+            <a class="font-label text-white/80 hover:text-white py-3 px-2 rounded-xl hover:bg-white/5" href="about.html">About</a>
+            <a class="font-label text-white/80 hover:text-white py-3 px-2 rounded-xl hover:bg-white/5" href="stealth.html">Stealth</a>
+            <a class="font-label text-white/80 hover:text-white py-3 px-2 rounded-xl hover:bg-white/5" href="uavs.html">UAVs</a>
+            <a class="font-label text-white/80 hover:text-white py-3 px-2 rounded-xl hover:bg-white/5" href="advanced-systems.html">Advanced Systems</a>
+            <a class="font-label text-white/80 hover:text-white py-3 px-2 rounded-xl hover:bg-white/5" href="maritime.html">Maritime</a>
+            <a class="font-label text-white bg-white/10 py-3 px-2 rounded-xl mt-2 text-center" href="contact.html">Contact Us</a>
+        </div>
+    </div>
+
+    <main class="pb-xl">
+        <section class="w-full max-w-[1728px] mx-auto px-margin flex flex-col items-center text-center mb-xl pt-[220px] relative overflow-hidden">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-screen max-w-none h-full z-0 overflow-hidden pointer-events-none">
+                <video class="absolute top-1/2 left-1/2 -translate-x-[15%] -translate-y-[70%] w-full h-full object-fill select-none opacity-40 scale-145" style="mask-image:radial-gradient(ellipse 60% 60% at center, #000 40%, transparent 75%); -webkit-mask-image:radial-gradient(ellipse 60% 60% at center, #000 40%, transparent 75%);" autoplay loop muted playsinline>
+                    <source src="assets/videos/wing-1.mp4" type="video/mp4"/>
+                </video>
+            </div>
+            <div class="eyebrow mb-6 relative z-10">Advanced Materials &amp; Munitions</div>
+            <h1 class="font-display text-display text-balance max-w-4xl mb-8 text-text leading-[1.04] relative z-10">Weapons &amp; Materials</h1>
+            <p class="font-body-lg text-body-lg text-muted max-w-2xl text-pretty relative z-10">
+                Materials engineered for performance, precision targeting and high-performance missile systems.
+            </p>
+        </section>
+
+        <!-- Composites -->
+        <section class="py-lg px-margin max-w-[1728px] mx-auto">
+            <div class="max-w-3xl mx-auto text-center mb-14">
+                <div class="eyebrow justify-center mb-5" style="display:inline-flex;">Advanced Composites</div>
+                <h2 class="font-display text-[44px] leading-[1.08] font-bold tracking-tight text-text text-balance mb-5">Superior to the sum of their parts</h2>
+                <p class="font-body-lg text-muted text-pretty">
+                    Advanced composites combine two or more distinct constituents to create a material with properties superior to its individual components — often demanding specialised machinery for their complex manufacturing.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div class="bg-white-card rounded-[32px] p-6 flex flex-col group overflow-hidden border border-line/40 shadow-sm hover:shadow-xl transition-all reveal">
+                    <figure class="imgslot mb-6" data-img="composite-pmc" data-alt="Polymer matrix composite" style="aspect-ratio:4/3;border-radius:20px">
+                        <span class="imgslot-tag">PMC · 4:3</span>
+                    </figure>
+                    <div class="font-label text-[11px] text-accent tracking-[0.16em] uppercase mb-2">PMC</div>
+                    <h3 class="font-h3 text-xl font-bold mb-2 text-text">Polymer Matrix Composites</h3>
+                    <p class="font-body-md text-muted flex-grow">Reinforcing fibres bound within a polymer resin, valued for a high strength-to-weight ratio in airframe and UAV structures.</p>
+                </div>
+
+                <div class="bg-white-card rounded-[32px] p-6 flex flex-col group overflow-hidden border border-line/40 shadow-sm hover:shadow-xl transition-all reveal">
+                    <figure class="imgslot mb-6" data-img="composite-mmc" data-alt="Metal matrix composite" style="aspect-ratio:4/3;border-radius:20px">
+                        <span class="imgslot-tag">MMC · 4:3</span>
+                    </figure>
+                    <div class="font-label text-[11px] text-accent tracking-[0.16em] uppercase mb-2">MMC</div>
+                    <h3 class="font-h3 text-xl font-bold mb-2 text-text">Metal Matrix Composites</h3>
+                    <p class="font-body-md text-muted flex-grow">A metallic matrix reinforced with a second phase, combining stiffness and thermal stability for demanding structural roles.</p>
+                </div>
+
+                <div class="bg-white-card rounded-[32px] p-6 flex flex-col group overflow-hidden border border-line/40 shadow-sm hover:shadow-xl transition-all reveal">
+                    <figure class="imgslot mb-6" data-img="composite-cmc" data-alt="Ceramic matrix composite" style="aspect-ratio:4/3;border-radius:20px">
+                        <span class="imgslot-tag">CMC · 4:3</span>
+                    </figure>
+                    <div class="font-label text-[11px] text-accent tracking-[0.16em] uppercase mb-2">CMC</div>
+                    <h3 class="font-h3 text-xl font-bold mb-2 text-text">Ceramic Matrix Composites</h3>
+                    <p class="font-body-md text-muted flex-grow">Ceramic fibres in a ceramic matrix, engineered to withstand extreme temperatures with improved toughness.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Propulsion & Strike -->
+        <section class="py-lg px-margin max-w-[1728px] mx-auto">
+            <div class="bg-panel-bg rounded-[64px] border border-line/30 p-8 md:p-14">
+                <div class="text-center mb-14">
+                    <div class="eyebrow justify-center mb-5" style="display:inline-flex;">Propulsion &amp; Strike</div>
+                    <h2 class="font-display text-[44px] leading-[1.08] font-bold tracking-tight text-text text-balance">Propulsion &amp; Strike Systems</h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                    <div class="bg-white-card rounded-[32px] p-8 flex flex-col group overflow-hidden border border-line/40 shadow-sm hover:shadow-xl transition-all reveal">
+                        <div class="font-label text-[11px] text-navy tracking-[0.16em] uppercase mb-2">Propulsion</div>
+                        <h3 class="font-h3 text-2xl font-bold mb-2 text-text">Rocket Motor Production</h3>
+                        <p class="font-body-md text-muted mb-6">Warhead and fuse production capabilities.</p>
+                        <figure class="imgslot mb-8" data-img="rocket-motor" data-alt="Rocket motor" style="aspect-ratio:16/9;border-radius:22px">
+                            <span class="imgslot-tag">Rocket motor · 16:9</span>
+                        </figure>
+                        <div class="grid grid-cols-2 gap-y-4 font-body-md text-sm bg-soft-card-2 p-5 rounded-2xl">
+                            <div><strong class="text-text">Burning Time</strong> <span class="text-muted">0.02–24 sec</span></div>
+                            <div><strong class="text-text">Propellant</strong> <span class="text-muted">Solid</span></div>
+                            <div><strong class="text-text">Penetration</strong> <span class="text-muted">750 mm</span></div>
+                            <div><strong class="text-text">Speed</strong> <span class="text-muted">150 m/sec</span></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white-card rounded-[32px] p-8 flex flex-col group overflow-hidden border border-line/40 shadow-sm hover:shadow-xl transition-all reveal">
+                        <div class="font-label text-[11px] text-accent tracking-[0.16em] uppercase mb-2">Precision Strike</div>
+                        <h3 class="font-h3 text-2xl font-bold mb-2 text-text">TX-16 Laser-Guided Missile</h3>
+                        <p class="font-body-md text-muted mb-6">Low-cost full strap-down laser-guided missile.</p>
+                        <figure class="imgslot mb-8" data-img="tx-16-missile" data-alt="TX-16 laser-guided missile" style="aspect-ratio:16/9;border-radius:22px">
+                            <span class="imgslot-tag">TX-16 missile · 16:9</span>
+                        </figure>
+                        <div class="grid grid-cols-2 gap-y-4 font-body-md text-sm bg-soft-card-2 p-5 rounded-2xl">
+                            <div><strong class="text-text">Length</strong> <span class="text-muted">1100 mm</span></div>
+                            <div><strong class="text-text">Wingspan</strong> <span class="text-muted">332 mm</span></div>
+                            <div><strong class="text-text">Warhead</strong> <span class="text-muted">HE-HEAT</span></div>
+                            <div><strong class="text-text">Kill Radius</strong> <span class="text-muted">≥15 m</span></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PS1 Seeker -->
+        <section class="py-lg px-margin max-w-[1728px] mx-auto">
+            <div class="bg-white-card rounded-[40px] p-8 md:p-12 flex flex-col lg:flex-row gap-12 items-center border border-line/40 shadow-sm reveal">
+                <figure class="imgslot w-full lg:w-1/2 min-h-[360px] shadow-lg" data-img="ps1-eo-seeker" data-alt="PS1 electro-optical payload-seeker" style="border-radius:28px">
+                    <span class="imgslot-tag">PS1 EO seeker · 4:3</span>
+                </figure>
+                <div class="w-full lg:w-1/2">
+                    <div class="font-label text-[11px] text-accent tracking-[0.16em] uppercase mb-3">Electro-Optical Payload</div>
+                    <h2 class="font-display text-[40px] font-bold mb-4 text-text leading-[1.08] tracking-tight text-balance">PS1 Electro-Optical Payload-Seeker</h2>
+                    <p class="font-body-lg text-muted mb-8 text-pretty">High-performance optical system for precision targeting. Sold to the British Army for IFPA.</p>
+                    <div class="grid grid-cols-2 gap-x-8 gap-y-6 font-body-md text-text">
+                        <div class="border-l-[3px] border-accent pl-4">
+                            <div class="font-bold">Sensor Range</div>
+                            <div class="text-muted">5 km (day/night)</div>
+                        </div>
+                        <div class="border-l-[3px] border-navy pl-4">
+                            <div class="font-bold">Service Altitude</div>
+                            <div class="text-muted">0 – 40,000 ft</div>
+                        </div>
+                        <div class="border-l-[3px] border-navy pl-4">
+                            <div class="font-bold">Gimbals</div>
+                            <div class="text-muted">Pitch, roll and yaw</div>
+                        </div>
+                        <div class="border-l-[3px] border-navy pl-4">
+                            <div class="font-bold">Water Tight</div>
+                            <div class="text-muted">Submerged up to 2 m</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="bg-navy text-white pt-xl pb-lg px-margin rounded-t-[64px] relative z-20 mt-12">
+        <div class="max-w-[1728px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-xl mb-xl">
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/images/logo.png" alt="StratoTech logo" class="h-14 w-auto max-w-[180px] object-contain"/>
+                        <span class="font-bold text-lg tracking-tight text-white">StratoTech</span>
+                    </div>
+                    <p class="font-body-md text-white/50 max-w-xs">Deep-tech defence solutions in stealth nanotextiles, advanced composites and secure maritime systems — engineered in Hyderabad, India.</p>
+                </div>
+                <div>
+                    <h4 class="font-label text-white mb-6 uppercase tracking-widest text-[10px]">Company</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="about.html">About Us</a></li>
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="about.html">Leadership</a></li>
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label text-white mb-6 uppercase tracking-widest text-[10px]">Solutions</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="stealth.html">StealthTex &amp; InfraHex</a></li>
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="uavs.html">UAV Systems</a></li>
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="advanced-systems.html">Advanced Composites</a></li>
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="maritime.html">AIS-NSM Transponders</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label text-white mb-6 uppercase tracking-widest text-[10px]">Contact</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="mailto:info@stratotech.co">info@stratotech.co</a></li>
+                        <li><a class="font-body-md text-white/60 hover:text-white transition-colors" href="tel:+917416621515">+91 74166 21515</a></li>
+                        <li class="font-body-md text-white/60">STRATOTECH AEROSPACE AND DEFENCE PRIVATE LIMITED<br/>Flat No.501, SM Royal Arcade, Chandanagar, Tirumalagiri<br/>Hyderabad – 500050, Telangana</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-md border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="font-label text-[11px] text-white/40">© <span data-year>2026</span> StratoTech Aerospace &amp; Defence Pvt Ltd. All rights reserved.</p>
+                <span class="font-label text-[11px] text-white/40">Beyond The Visual Range</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/site.js"></script>
+</body>
+</html>
